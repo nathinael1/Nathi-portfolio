@@ -290,7 +290,7 @@ body.dark-mode #dark-icon {
         max-height: 0; 
         overflow: hidden;
         margin-top: -30px;
-        margin-left: 65px;
+        margin-left: 15%;
     }
 
     .nav-box ul.show {
