@@ -1,0 +1,309 @@
+/* Root Variables */
+:root {
+    --background-color: rgb(3, 121, 121); /* Light background */
+    --nav-background-color: rgb(3, 121, 121);
+    --text-color: whitesmoke;
+    --hover-background-color: #00dbf8;
+    --link-padding: 10px 15px;
+    --link-border-radius: 5px;
+    --nav-padding: 20px;
+    --nav-gap: 10px;
+    --body-margin-top: 80px;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin-top: var(--body-margin-top);
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Your original styles... */
+/* Feel free to keep all the existing styles */
+
+/* Default (Light Mode) Variables */
+:root {
+    --background-color: #f0f0f0;  /* Default background */
+    --text-color: #333;           /* Default text color */
+    --nav-bg-color: #fff;         /* Default nav background */
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --background-color: #2e2e2e;  /* Dark mode background */
+    --text-color: #fff;           /* Dark mode text color */
+    --nav-bg-color: #333;         /* Dark mode nav background */
+}
+
+/* Apply the variables to the rest of your styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--nav-bg-color);
+}
+
+/* Ensure the text color in specific sections adapts to the theme */
+h1, h2, h3, p {
+    color: var(--text-color);
+}
+
+/* Theme switch icons - keep them in place but toggle visibility */
+#light-icon {
+    opacity: 1;
+    transition: opacity 0.3s;
+    position: fixed;
+}
+
+body.dark-mode #light-icon {
+    opacity: 0;  /* Hide light icon in dark mode */
+}
+
+#dark-icon {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+body.dark-mode #dark-icon {
+    opacity: 1;  /* Show dark icon in dark mode */
+}
+
+/* Add more transition or color changes for texts, buttons, and elements in dark mode if needed */
+
+
+/* Navigation Styling */
+.nav-box {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    background-color: var(--nav-background-color);
+    padding: var(--nav-padding) 20px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: right;
+    z-index: 1000;
+}
+
+.nav-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--nav-gap);
+    transition: max-height 0.3s ease-in-out;
+}
+
+.nav-box a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: var(--link-padding);
+    border-radius: var(--link-border-radius);
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.nav-box a:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.781), 0 0 20px rgba(0, 0, 0, 0.548);
+    text-decoration: none;
+    transition: 0.9s;
+    border-radius: 50px;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* Profile Section */
+.profile-section {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    padding-right: 40px;
+    justify-content: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    flex-wrap: nowrap;
+}
+
+.profile img {
+    width: 350px;
+    height: 550px;
+    margin-right: 20px;
+    border-radius: 80%;
+    animation: wave 3s ease-in-out infinite;
+    border-bottom: solid;
+}
+
+.profile h2 {
+    font-size: 70px;
+    margin: 0;
+    color: var(--text-color);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.profile h2 span {
+    color: var(--hover-background-color);
+}
+
+.profile h3 {
+    font-size: 30px;
+    margin: 0;
+    color: var(--text-color);
+    padding: 20;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--text-color);
+    width: 0;
+    animation: typing 3.5s steps(40, end) forwards, blink 1s step-end infinite;
+}
+
+.profile p {
+    font-size: 20px;
+    animation: fadeIn 2s ease-in-out 1s forwards;
+}
+
+/* Content Styling */
+.content {
+    padding: 40px;
+    color: rgb(10, 9, 9);
+    text-align: center;
+}
+
+/* Projects Section */
+.projects {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: var(--hover-background-color);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Text Animations */
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-box ul {
+        flex-direction: row; /* Change to column on mobile */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        display: none; 
+        max-height: 0; 
+        overflow: hidden;
+        margin-top: -30px;
+    }
+
+    .nav-box ul.show {
+        display: flex; /* Show on toggle */
+        max-height: 500px; /* Allow enough height for items */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        padding-right: 10px;
+    }
+
+    .profile-section {
+        flex-direction: column; 
+        width: 60%;
+        padding-right: 10px;
+    }
+
+    .profile img {
+        width: 40%; 
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .project-list {
+        flex-direction: column; /* Stack projects vertically */
+    }
+
+    .project-item {
+        width: 100%; /* Full width on mobile */
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend web Developer Nathinael</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-box">
+            <div class="theme-switch" id="theme-switch" onclick="toggleTheme()">
+                <i class='bx bx-toggle-right' id="light-icon">
+                    <img src="toggle-left-regular-24 (1).png" alt="Light Mode Icon">
+                </i>
+                <i class='bx bxs-toggle-right' id="dark-icon" style="opacity: 0;">
+                    <img src="bxs-toggle-right.png" alt="Dark Mode Icon">
+                </i>
+            </div>
+            
+            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+            <ul id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile section -->
+    <section class="profile-section" id="about">
+        <div class="profile">
+            <img src="pro.png" alt="Profile Picture">
+            <div>
+                <h2>Hi I'm <br><span>Nathinael Gemechu</span></h2>
+                <h3>Frontend Web Developer</h3>
+                <p>
+                    I’m a skilled front-end developer with expertise in HTML, CSS, and JavaScript. I create responsive,
+                    visually stunning websites that offer great user experiences.
+                    Check out my portfolio for examples of my work!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="content" id="services">
+        <h1>Services</h1>
+        <p>I offer web development, responsive design, and front-end optimization services to help your business succeed online.</p>
+    </section>
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Project 1</h3>
+                <p>A beautiful and responsive portfolio website.</p>
+            </div>
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>An e-commerce site with modern UI/UX design.</p>
+            </div>
+            <div class="project-item">
+                <h3>Project 3</h3>
+                <p>A web app with custom animations and dynamic features.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <h1>Contact Me</h1>
+        <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+        <p>Phone: <a href="tel:+123456789">+123456789</a></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
